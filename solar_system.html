@@ -1,0 +1,112 @@
+<html>
+<head>
+	<title>hello avijit</title>
+	<style type="text/css">
+	body{
+		margin:0px;
+		padding:0px;
+	}
+	#solar_system{
+		position:relative;
+		width:100%;
+		height:800px;
+		background-image: url(galaxy.png);
+		background-repeat:no-repeat;
+		background-size: cover;
+		padding:20px;
+		overflow: hidden;
+	}
+	#neptune{
+		position:absolute;
+		width:600px;
+		height:600px;
+		margin:0px auto;
+		border-radius: 100%;
+		border:1px solid #2c5198;
+		animation:solar 10s linear infinite;
+	}
+	#neptune::after{
+		position:absolute;
+		width:20px;
+		height:20px;
+		border-radius: 100%;
+		background-color:red;
+		box-shadow: 2px 2px 2px white;
+		left:195px;
+		top:2px;
+		content:'';
+	}
+	#uranus{
+		position:absolute;
+		width:500px;
+		height:500px;
+		margin:0px auto;
+		border-radius: 100%;
+		left:70px;
+		top:70px;
+		border:1px solid #2c5198;
+		animation:solar 15s linear infinite;
+	}
+	#uranus::after{
+		position:absolute;
+		width:20px;
+		height:20px;
+		border-radius: 100%;
+		background-color:yellow;
+		box-shadow: 2px 2px 2px white;
+		left:350px;
+		top:15px;
+		content:'';
+	}
+	#saturn{
+		position:absolute;
+		width:400px;
+		height:400px;
+		margin:0px auto;
+		border-radius: 100%;
+		left:120px;
+		top:120px;
+		border:1px solid #2c5198;
+		animation:solar 20s linear infinite;
+	}
+	#saturn::after{
+		position:absolute;
+		width:20px;
+		height:20px;
+		border-radius: 100%;
+		background-color:blue;
+		box-shadow: 2px 2px 2px white;
+		left:250px;
+		content:'';
+	}
+	@keyframes solar{
+		from{transform:rotate(360deg);}
+		to{transform:rotate(0deg);}
+	}
+	#sun{
+		position: absolute;
+		width:50px;
+		height: 50px;
+		border-radius: 50%;
+		background:linear-gradient(red,yellow);
+		box-shadow: 1px 1px 7px yellow;
+		left:300px;
+		top:300px;
+		animation:solar 10s ease infinite;
+	}
+	</style>
+</head>
+<body>
+	<div id="solar_system">
+		<div id="neptune"></div>
+		<div id="uranus"></div>
+		<div id="saturn"></div>
+		<div id="jupiter"></div>
+		<div id="mars"></div>
+		<div id="earth"></div>
+		<div id="venus"></div>
+		<div id="mercury"></div>
+		<div id="sun"></div>
+	</div>
+</body>
+</html>
